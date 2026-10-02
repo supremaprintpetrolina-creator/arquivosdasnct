@@ -1,0 +1,268 @@
+echo "# ARQUIVOS-DA-SNCT" >> README.md 
+git init 
+git add README.md 
+git commit -m "primeiro commit" 
+git branch -M main 
+git remote add origin https://github.com/supremaprintpetrolina-creator/ARQUIVOS-DA-SNCT.git
+ git push -u origin main
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Download dos Banners para Impressão</title>
+  <style>
+    :root {
+      --bg-color: #f4f6f9;
+      --card-bg: #ffffff;
+      --primary-color: #2563eb;
+      --primary-hover: #1d4ed8;
+      --text-main: #1e293b;
+      --text-muted: #64748b;
+      --accent-color: #10b981;
+      --border-color: #e2e8f0;
+      --radius: 16px;
+      --shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.01);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-main);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+      line-height: 1.6;
+    }
+
+    .container {
+      background: var(--card-bg);
+      width: 100%;
+      max-width: 580px;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 36px 28px;
+      text-align: center;
+      border: 1px solid var(--border-color);
+    }
+
+    .icon-badge {
+      width: 68px;
+      height: 68px;
+      background-color: #dbeafe;
+      color: var(--primary-color);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+    }
+
+    .icon-badge svg {
+      width: 36px;
+      height: 36px;
+      stroke-width: 2;
+    }
+
+    h1 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 10px;
+    }
+
+    p.subtitle {
+      color: var(--text-muted);
+      font-size: 0.98rem;
+      margin-bottom: 28px;
+    }
+
+    .info-box {
+      background-color: #f8fafc;
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 18px;
+      text-align: left;
+      margin-bottom: 28px;
+    }
+
+    .info-box h2 {
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+    }
+
+    .info-box ul {
+      list-style: none;
+    }
+
+    .info-box li {
+      font-size: 0.9rem;
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+
+    .info-box li:last-child {
+      margin-bottom: 0;
+    }
+
+    .info-box li svg {
+      width: 18px;
+      height: 18px;
+      color: var(--accent-color);
+      margin-right: 10px;
+      flex-shrink: 0;
+    }
+
+    .btn-main {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+      background-color: var(--primary-color);
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 1.05rem;
+      font-weight: 600;
+      padding: 16px 24px;
+      border-radius: 12px;
+      transition: background-color 0.2s ease, transform 0.1s ease;
+      box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
+    }
+
+    .btn-main:hover {
+      background-color: var(--primary-hover);
+    }
+
+    .btn-main:active {
+      transform: scale(0.99);
+    }
+
+    .secondary-actions {
+      margin-top: 16px;
+    }
+
+    .btn-copy {
+      background: none;
+      border: none;
+      color: var(--text-muted);
+      font-size: 0.88rem;
+      cursor: pointer;
+      text-decoration: underline;
+      transition: color 0.2s ease;
+    }
+
+    .btn-copy:hover {
+      color: var(--text-main);
+    }
+
+    .toast {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%) translateY(100px);
+      background-color: #0f172a;
+      color: #ffffff;
+      padding: 10px 20px;
+      border-radius: 30px;
+      font-size: 0.88rem;
+      opacity: 0;
+      transition: all 0.3s ease;
+      pointer-events: none;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+
+    .toast.show {
+      transform: translateX(-50%) translateY(0);
+      opacity: 1;
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        padding: 28px 20px;
+      }
+      h1 {
+        font-size: 1.4rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="icon-badge">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" "M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+      </svg>
+    </div>
+
+    <h1>Arquivos do Banner Prontos!</h1>
+    <p class="subtitle">Parabéns pelo trabalho! Acesse o link abaixo para salvar a versão final do seu banner para impressão.</p>
+
+    <div class="info-box">
+      <h2>Lembretes importantes:</h2>
+      <ul>
+        <li>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+          </svg>
+          Baixe o arquivo em alta resolução no dispositivo.
+        </li>
+        <li>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+          </svg>
+          Confira o texto e as imagens antes do envio final.
+        </li>
+        <li>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+          </svg>
+          Em caso de dúvidas, fale com a equipe responsável.
+        </li>
+      </ul>
+    </div>
+
+    <a href="https://forms.gle/9c59qATcwFYDRnDs9" target="_blank" class="btn-main">
+      <span>Acessar Arquivos dos Banners</span>
+      <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+      </svg>
+    </a>
+
+    <div class="secondary-actions">
+      <button class="btn-copy" onclick="copyLink()">Copiar link da página</button>
+    </div>
+  </div>
+
+  <div id="toast" class="toast">Link copiado para a área de transferência!</div>
+
+  <script>
+    function copyLink() {
+      const url = "https://forms.gle/33UrZsgMqU771hQN7";
+      navigator.clipboard.writeText(url).then(() => {
+        const toast = document.getElementById("toast");
+        toast.classList.add("show");
+        setTimeout(() => {
+          toast.classList.remove("show");
+        }, 3000);
+      });
+    }
+  </script>
+
+</body>
+</html>
